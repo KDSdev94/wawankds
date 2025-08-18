@@ -44,7 +44,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="bg-gray-50 font-inter">
+    <div className="bg-gray-50 dark:bg-gray-900 font-inter transition-colors">
       <title>Muhammad Surya J - Fullstack Developer Portfolio</title>
       <Sidebar 
         activeSection={activeSection} 

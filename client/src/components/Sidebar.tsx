@@ -1,4 +1,5 @@
-import { Home, Briefcase, Star, Play, Edit, Heart, Github, Linkedin, Youtube, Instagram, Twitter, Globe } from "lucide-react";
+import { Home, Briefcase, Star, Play, Edit, Heart, Github, Linkedin, Youtube, Instagram, Twitter, Globe, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 interface SidebarProps {
   activeSection: string;
@@ -6,6 +7,8 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
+  const { theme, toggleTheme } = useTheme();
+  
   const navItems = [
     { id: "introduction", label: "Introduction", icon: Home },
     { id: "portfolio", label: "Portfolio", icon: Briefcase },
@@ -28,16 +31,29 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
     <div className="fixed left-0 top-0 h-full w-60 sidebar-dark text-white z-50 lg:block hidden">
       {/* Profile Section */}
       <div className="p-6 border-b border-gray-700">
-        <div className="flex items-center space-x-3">
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=50&h=50&fit=crop&crop=face" 
-            alt="Muhammad Surya J" 
-            className="w-12 h-12 rounded-full object-cover"
-          />
-          <div>
-            <h3 className="font-semibold text-white">Muhammad Surya J</h3>
-            <p className="text-sm text-gray-300">Fullstack Developer</p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=50&h=50&fit=crop&crop=face" 
+              alt="Muhammad Surya J" 
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h3 className="font-semibold text-white">Muhammad Surya J</h3>
+              <p className="text-sm text-gray-300">Fullstack Developer</p>
+            </div>
           </div>
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg hover:bg-gray-700 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? 
+              <Sun className="w-5 h-5 text-yellow-400" /> : 
+              <Moon className="w-5 h-5 text-gray-300" />
+            }
+          </button>
         </div>
       </div>
 

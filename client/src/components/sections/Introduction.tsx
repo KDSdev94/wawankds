@@ -15,12 +15,12 @@ export default function Introduction() {
   };
 
   return (
-    <section id="introduction" className="min-h-screen bg-white">
+    <section id="introduction" className="min-h-screen bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Introduction</h1>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Introduction</h1>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               Full Stack Developer from Bandung, Indonesia, with solid experience in responsive systems, 
               e-commerce, and interactive websites. Achieved 98% design accuracy and 99.9% uptime. 
               Committed to innovation and user satisfaction.
@@ -36,20 +36,30 @@ export default function Introduction() {
               <Button 
                 variant="outline"
                 onClick={handleResumeDownload}
-                className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+                className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >
                 Download Resume
                 <Download className="w-4 h-4" />
               </Button>
             </div>
           </div>
-          <div className="text-center">
-            <img 
-              src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&w=400&h=400&fit=crop" 
-              alt="Traveling and tea time anime character" 
-              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-            />
-            <p className="text-sm text-gray-500 mt-4 flex items-center justify-center gap-2">
+          <div className="text-center relative">
+            {/* Tilted frame container */}
+            <div className="relative inline-block">
+              {/* Background frame with tilt */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl transform rotate-3 scale-105"></div>
+              {/* Second frame for depth */}
+              <div className="absolute inset-0 bg-white dark:bg-gray-700 rounded-2xl transform -rotate-1 scale-102 shadow-lg"></div>
+              {/* Main image container */}
+              <div className="relative bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&w=350&h=350&fit=crop" 
+                  alt="Traveling and tea time anime character" 
+                  className="rounded-xl w-80 h-80 object-cover"
+                />
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 flex items-center justify-center gap-2">
               Traveling and tea time 🍵✨
             </p>
           </div>
