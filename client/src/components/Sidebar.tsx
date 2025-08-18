@@ -1,18 +1,17 @@
 import {
-  Home,
-  Briefcase,
-  Star,
-  Heart,
-  Mail,
-  Github,
-  Linkedin,
-  Youtube,
-  Instagram,
-  Twitter,
-  Globe,
-  Sun,
-  Moon,
-} from "lucide-react";
+  IoHomeOutline,
+  IoBriefcaseOutline,
+  IoStarOutline,
+  IoHeartOutline,
+  IoMailOutline,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoYoutube,
+  IoLogoInstagram,
+  IoLogoTwitter,
+} from "react-icons/io5";
+import { FaGlobe, FaSun, FaMoon } from "react-icons/fa";
+
 import { useTheme } from "./ThemeProvider";
 import { useLocation } from "wouter";
 
@@ -26,11 +25,11 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   const [, setLocation] = useLocation();
 
   const navItems = [
-    { id: "introduction", label: "Introduction", icon: Home },
-    { id: "portfolio", label: "Portfolio", icon: Briefcase },
-    { id: "testimonials", label: "Testimonials", icon: Star },
-    { id: "contact", label: "Contact Me", icon: Mail },
-    { id: "donation", label: "Donation", icon: Heart },
+    { id: "introduction", label: "Introduction", icon: IoHomeOutline },
+    { id: "portfolio", label: "Portfolio", icon: IoBriefcaseOutline },
+    { id: "testimonials", label: "Testimonials", icon: IoStarOutline },
+    { id: "contact", label: "Contact Me", icon: IoMailOutline },
+    { id: "donation", label: "Donation", icon: IoHeartOutline },
   ];
 
   const handleNavigation = (itemId: string) => {
@@ -50,12 +49,12 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Youtube, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Globe, href: "#" },
+    { icon: IoLogoGithub, href: "#" },
+    { icon: IoLogoLinkedin, href: "#" },
+    { icon: IoLogoYoutube, href: "#" },
+    { icon: IoLogoInstagram, href: "#" },
+    { icon: IoLogoTwitter, href: "#" },
+    { icon: FaGlobe, href: "#" },
   ];
 
   return (
@@ -103,9 +102,9 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-yellow-400" />
+              <FaSun className="w-5 h-5 text-yellow-400" />
             ) : (
-              <Moon className="w-5 h-5 text-gray-600" />
+              <FaMoon className="w-5 h-5 text-gray-600" />
             )}
           </button>
         </div>

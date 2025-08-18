@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  Github,
-  Linkedin,
-  Youtube,
-  Instagram,
-} from "lucide-react";
+
+import { FaWhatsapp, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
+
+import { SiGmail, SiYoutube, SiInstagram, SiGooglemaps } from "react-icons/si";
+
 import Sidebar from "@/components/Sidebar";
 import MobileHeader from "@/components/MobileHeader";
 import { useLocation } from "wouter";
@@ -53,19 +49,19 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: Mail,
+      icon: SiGmail,
       title: "Email",
       value: "kurdwisap04@gmail.com",
       link: "mailto:kurdwisap04@gmail.com",
     },
     {
-      icon: Phone,
-      title: "Phone",
+      icon: FaWhatsapp,
+      title: "Whatsapp",
       value: "+62 821-3452-8638",
-      link: "tel:+6282134528638",
+      link: "https://wa.me/6282134528638",
     },
     {
-      icon: MapPin,
+      icon: SiGooglemaps,
       title: "Location",
       value: "Brebes, Central Java, Indonesia",
       link: "https://maps.app.goo.gl/p8kCFVPh4dXbhcU68",
@@ -73,15 +69,19 @@ export default function ContactPage() {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/KDSCorner", label: "GitHub" },
+    { icon: FaGithub, href: "https://github.com/KDSCorner", label: "GitHub" },
     {
-      icon: Linkedin,
+      icon: FaLinkedinIn,
       href: "https://linkedin.com/in/suryamsj",
       label: "LinkedIn",
     },
-    { icon: Youtube, href: "https://youtube.com/@suryamsj", label: "YouTube" },
     {
-      icon: Instagram,
+      icon: SiYoutube,
+      href: "https://youtube.com/@suryamsj",
+      label: "YouTube",
+    },
+    {
+      icon: SiInstagram,
       href: "https://instagram.com/suryamsj",
       label: "Instagram",
     },
@@ -257,7 +257,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full sidebar-dark text-white hover:opacity-90 transition-colors"
                   >
-                    <Send className="w-4 h-4 mr-2" />
+                    <FiSend className="w-4 h-4 mr-2" />
                     Send Message
                   </Button>
                 </form>
