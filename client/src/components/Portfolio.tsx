@@ -45,14 +45,14 @@ export default function Portfolio() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 font-inter transition-colors">
-      <title>Muhammad Surya J - Fullstack Developer Portfolio</title>
-      <Sidebar 
-        activeSection={activeSection} 
-        onNavigate={scrollToSection} 
+      <title>Kurniawan Dwi Saputra - {activeSection}</title>
+      <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
+      <MobileHeader
+        onNavigate={scrollToSection}
+        activeSection={activeSection}
       />
-      <MobileHeader onNavigate={scrollToSection} />
-      
-      <div className="lg:ml-60 pt-20 lg:pt-0">
+
+      <div className="lg:ml-80 pt-20 lg:pt-0">
         <Introduction />
         <Experience />
         <Education />
