@@ -55,25 +55,25 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "suryamsj@gmail.com",
-      link: "mailto:suryamsj@gmail.com",
+      value: "kurdwisap04@gmail.com",
+      link: "mailto:kurdwisap04@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+62 812-3456-7890",
-      link: "tel:+6281234567890",
+      value: "+62 821-3452-8638",
+      link: "tel:+6282134528638",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Jakarta, Indonesia",
-      link: "#",
+      value: "Brebes, Central Java, Indonesia",
+      link: "https://maps.app.goo.gl/p8kCFVPh4dXbhcU68",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/suryamsj", label: "GitHub" },
+    { icon: Github, href: "https://github.com/KDSCorner", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://linkedin.com/in/suryamsj",
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       <Input
                         id="firstName"
                         type="text"
-                        placeholder="John"
+                        placeholder="Input your first name here"
                         className="w-full"
                       />
                     </div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                       <Input
                         id="lastName"
                         type="text"
-                        placeholder="Doe"
+                        placeholder="Input your last name here"
                         className="w-full"
                       />
                     </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="Input email address"
                       className="w-full"
                     />
                   </div>
@@ -248,7 +248,7 @@ export default function ContactPage() {
                     <Textarea
                       id="message"
                       rows={5}
-                      placeholder="Tell me about your project..."
+                      placeholder="Tell me about your minds and needs..."
                       className="w-full"
                     />
                   </div>
