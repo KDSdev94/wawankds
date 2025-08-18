@@ -125,7 +125,7 @@ export default function TestimonialsPage() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 font-inter transition-colors">
-      <title>Testimonials - Muhammad Surya J - Fullstack Developer</title>
+      <title>Kurniawan Dwi Saputra - {activeSection}</title>
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
       <MobileHeader
         onNavigate={scrollToSection}

@@ -220,7 +220,7 @@ export default function MobileHeader({
                 theme === "dark" ? "text-gray-500" : "text-gray-400"
               }`}
             >
-              © 2025 Muhammad Surya J
+              © 2025 Kurniawan Dwi Saputra
             </p>
           </div>
         </div>
