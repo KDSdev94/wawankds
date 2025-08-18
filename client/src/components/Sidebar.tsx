@@ -74,7 +74,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
           <div className="flex items-center space-x-3">
             <img
               src="/assets/hero-image.jpg"
-              alt="Muhammad Surya J"
+              alt="Kurniawan Dwi Saputra"
               className="w-12 h-12 rounded-full object-cover"
             />
             <div>
@@ -170,7 +170,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             theme === "dark" ? "text-gray-500" : "text-gray-400"
           }`}
         >
-          © 2025 Muhammad Surya J
+          © 2025 Kurniawan Dwi Saputra
         </p>
       </div>
     </div>
