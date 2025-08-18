@@ -96,7 +96,7 @@ export default function MobileHeader({
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
           <img
-            src="/public/assets/hero-image.jpg"
+            src="/assets/hero-image.jpg"
             alt="Kurniawan Dwi Saputra"
             className="w-10 h-10 rounded-full object-cover"
           />

@@ -73,7 +73,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img
-              src="/public/assets/hero-image.jpg"
+              src="/assets/hero-image.jpg"
               alt="Muhammad Surya J"
               className="w-12 h-12 rounded-full object-cover"
             />

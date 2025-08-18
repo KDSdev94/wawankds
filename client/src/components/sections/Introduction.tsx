@@ -56,7 +56,7 @@ export default function Introduction() {
               {/* Main image container */}
               <div className="relative bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
                 <img
-                  src="/public/assets/hero-image.jpg"
+                  src="/assets/hero-image.jpg"
                   alt="Traveling and tea time anime character"
                   className="rounded-xl w-80 h-80 object-cover mb-4"
                 />
