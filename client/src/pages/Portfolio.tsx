@@ -44,50 +44,45 @@ export default function PortfolioPage() {
 
   const projects = [
     {
-      title: "Maildotify",
+      title: "E-SkuulTime",
       description:
-        "Generate multiple email variations from a single Gmail by inserting dots (.) in different positions.",
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
-      technologies: ["Sveltekit", "Tailwind"],
+        "Create a schedule for students to attend classes at school.",
+      image: "/assets/image/e-skuultime.png",
+      technologies: ["Expo", "React Native"],
       github: "#",
       demo: "#",
     },
     {
-      title: "Cerita Pintar",
+      title: "Toko Amartha",
       description:
-        "Creating illustrated stories for children aged 0 - 8 years using AI, made with Sveltekit and Gemini AI.",
-      image:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
-      technologies: ["Sveltekit", "Tailwind", "Gemini AI", "PostgreSQL"],
+        "Create a desktop app for cashier transaction, made with Flutter and Dart.",
+      image: "/assets/image/toko_amartha.png",
+      technologies: ["Flutter", "Dart"],
       demo: "#",
     },
     {
-      title: "Dramakuy",
+      title: "MyLurah",
       description:
-        "Streaming platform for K-dramas and global films, built with web scraping techniques to showcase curated content.",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
-      technologies: ["Sveltekit", "Tailwind", "Gemini AI"],
+        "A digital application for managing letters and citizen reports for village administration.",
+      image: "/assets/image/MyLurah.jpg",
+      technologies: ["Expo", "React Native"],
       demo: "#",
     },
     {
-      title: "We Are",
+      title: "Sampah Tuntas",
       description:
-        "A collaborative platform for creative teams to share ideas and work together on projects.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB"],
+        "A digital application for managing waste collection and recycling.",
+      image: "/assets/image/sampah_tuntas.png",
+      technologies: ["Expo", "React Native"],
       github: "#",
       demo: "#",
     },
     {
-      title: "Analytics Dashboard",
+      title: "Febri Store",
       description:
-        "Comprehensive analytics and reporting dashboard with interactive charts and data visualization.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
-      technologies: ["Vue.js", "Chart.js", "Firebase"],
+        "E-commerce application for selling products and managing store.",
+      image: "/assets/image/febri_store.png",
+      technologies: ["Expo", "React Native"],
       github: "#",
       demo: "#",
     },
