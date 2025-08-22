@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#6366f1"/>
+    <!-- Main gradient for logo -->
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
+    
+    <!-- Inner glow for logo -->
+    <radialGradient id="logoGlow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Shadow filter for logo -->
+    <filter id="logoShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Text shadow for logo -->
+    <filter id="logoTextShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <!-- Icon circle -->
-  <circle cx="40" cy="40" r="28" fill="url(#grad)"/>
-  <text x="40" y="44" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif"
-        font-size="28" font-weight="800" fill="#ffffff">K</text>
+  
+  <!-- Icon circle with enhanced styling -->
+  <circle cx="40" cy="40" r="26" fill="url(#logoGrad)" filter="url(#logoShadow)"/>
+  
+  <!-- Inner glow overlay -->
+  <circle cx="40" cy="40" r="26" fill="url(#logoGlow)"/>
+  
+  <!-- Subtle inner border -->
+  <circle cx="40" cy="40" r="24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+  
+  <!-- Letter K with enhanced styling -->
+  <text x="40" y="40" dominant-baseline="central" text-anchor="middle" 
+        font-family="'SF Pro Display', 'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="24" font-weight="700" fill="#ffffff" filter="url(#logoTextShadow)">K</text>
+  
   <!-- Wordmark -->
-  <text x="80" y="47" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" fill="#111827" font-weight="700">Kurniawan Dwi Saputra</text>
-  <text x="80" y="66" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" fill="#6b7280" font-weight="500">Fullstack Developer</text>
+  <text x="80" y="47" font-family="'SF Pro Display', 'Inter', system-ui, sans-serif" 
+        font-size="24" fill="#111827" font-weight="700">Kurniawan Dwi Saputra</text>
+  <text x="80" y="66" font-family="'SF Pro Display', 'Inter', system-ui, sans-serif" 
+        font-size="13" fill="#6b7280" font-weight="500">App Developer</text>
 </svg>
