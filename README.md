@@ -18,6 +18,7 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 18** - Modern React with hooks and functional components
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
@@ -26,11 +27,13 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
 - **Framer Motion** - Smooth animations and transitions
 
 ### Build Tools
+
 - **Vite** - Fast build tool and dev server
 - **PostCSS** - CSS processing
 - **TypeScript** - Type checking and compilation
 
 ### Development
+
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 - **Husky** - Git hooks
@@ -39,18 +42,20 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/DevPorto.git
    cd DevPorto
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -58,6 +63,7 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    # or
@@ -105,7 +111,9 @@ DevPorto/
 ## 🎨 Customization
 
 ### Personal Information
+
 Update your personal information in the following files:
+
 - `client/src/components/sections/Introduction.tsx` - Name, title, bio
 - `client/src/components/sections/Experience.tsx` - Work experience
 - `client/src/components/sections/Education.tsx` - Educational background
@@ -113,12 +121,15 @@ Update your personal information in the following files:
 - `client/src/pages/Portfolio.tsx` - Portfolio projects
 
 ### Styling
+
 - **Colors**: Modify `tailwind.config.js` for custom color schemes
 - **Fonts**: Update font families in CSS files
 - **Themes**: Customize dark/light theme colors
 
 ### Images
+
 Replace images in `client/public/assets/` with your own:
+
 - Profile pictures
 - Project screenshots
 - Company logos
@@ -127,6 +138,7 @@ Replace images in `client/public/assets/` with your own:
 ## 📱 Responsive Design
 
 The portfolio is fully responsive and optimized for:
+
 - **Desktop** (1200px+) - Full sidebar navigation
 - **Tablet** (768px - 1199px) - Adaptive layout
 - **Mobile** (< 768px) - Mobile-first design with collapsible navigation
@@ -141,17 +153,20 @@ The portfolio is fully responsive and optimized for:
 ## 🚀 Deployment
 
 ### Netlify (Recommended)
+
 1. Connect your GitHub repository to Netlify
 2. Set build command: `npm run build`
 3. Set publish directory: `client/dist`
 4. Deploy automatically on every push
 
 ### Vercel
+
 1. Import your GitHub repository to Vercel
 2. Set framework preset to Vite
 3. Deploy with default settings
 
 ### GitHub Pages
+
 1. Add `gh-pages` dependency
 2. Update `package.json` scripts
 3. Deploy with `npm run deploy`
@@ -193,12 +208,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Kurniawan Dwi Saputra**
+
 - GitHub: [@KDSdev94](https://github.com/KDSdev94)
-- Portfolio: [Your Portfolio URL]
-- Email: [Your Email]
+- Portfolio: https://wawankds.netlify.app/
+- Email: kurdwisap04@gmail.com
 
 ---
 
 ⭐ **Star this repository if you found it helpful!**
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Kurniawan Dwi Saputra.
