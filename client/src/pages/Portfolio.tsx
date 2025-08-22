@@ -6,6 +6,15 @@ import MobileHeader from "@/components/MobileHeader";
 import { useLocation } from "wouter";
 import { useEffect, useState } from "react";
 
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  github?: string;
+  demo?: string;
+}
+
 export default function PortfolioPage() {
   const [activeSection, setActiveSection] = useState("portfolio");
   const [, setLocation] = useLocation();
@@ -42,49 +51,46 @@ export default function PortfolioPage() {
     window.location.href = "/";
   };
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "E-SkuulTime",
       description:
-        "Create a schedule for students to attend classes at school.",
+        "Aplikasi ini dirancang untuk memudahkan pengelolaan jadwal, aktivitas akademik, dan komunikasi antara admin, guru, dan siswa.",
       image: "/assets/image/e-skuultime.png",
-      technologies: ["Expo", "React Native"],
-      github: "#",
-      demo: "#",
+      technologies: ["Expo", "React Native", "Firebase"],
+      github: "https://github.com/KDSdev94/E-SkuulTime",
     },
     {
       title: "Toko Amartha",
       description:
-        "Create a desktop app for cashier transaction, made with Flutter and Dart.",
+        "Aplikasi ini dirancang khusus untuk membantu bisnis retail dalam mengelola transaksi, inventori, dan laporan penjualan dengan interface yang modern dan user-friendly.",
       image: "/assets/image/toko_amartha.png",
-      technologies: ["Flutter", "Dart"],
-      demo: "#",
+      technologies: ["Flutter", "Dart", "Hive"],
+      github: "https://github.com/KDSdev94/TokoAmartha",
     },
     {
       title: "MyLurah",
       description:
-        "A digital application for managing letters and citizen reports for village administration.",
+        "Aplikasi mobile layanan digital kelurahan untuk memudahkan akses layanan administratif dan informasi bagi warga.",
       image: "/assets/image/MyLurah.jpg",
-      technologies: ["Expo", "React Native"],
-      demo: "#",
+      technologies: ["Expo", "React Native", "Firebase"],
+      github: "https://github.com/KDSdev94/MyLurah",
     },
     {
       title: "Sampah Tuntas",
       description:
-        "A digital application for managing waste collection and recycling.",
+        "Aplikasi yang dapat membantu warga dalam melaporkan masalah sampah, memantau jadwal pengangkutan.",
       image: "/assets/image/sampah_tuntas.jpg",
-      technologies: ["Expo", "React Native"],
-      github: "#",
-      demo: "#",
+      technologies: ["Expo", "React Native", "Firebase"],
+      github: "https://github.com/KDSdev94/SampahTuntas",
     },
     {
       title: "Febri Store",
       description:
-        "E-commerce application for selling products and managing store.",
+        "Aplikasi ini menyediakan platform lengkap untuk toko online dengan fitur-fitur modern dan user-friendly interface.",
       image: "/assets/image/FebriStore.jpg",
-      technologies: ["Expo", "React Native"],
-      github: "#",
-      demo: "#",
+      technologies: ["Expo", "React Native", "Firebase"],
+      github: "https://github.com/KDSdev94/FebriStore",
     },
   ];
 
@@ -158,18 +164,22 @@ export default function PortfolioPage() {
                           variant="outline"
                           size="sm"
                           className="flex-1 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                          onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github className="w-4 h-4 mr-2" />
                           GitHub
                         </Button>
                       )}
-                      <Button
-                        size="sm"
-                        className="flex-1 sidebar-dark text-white hover:opacity-90"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </Button>
+                      {project.demo && (
+                        <Button
+                          size="sm"
+                          className="flex-1 sidebar-dark text-white hover:opacity-90"
+                          onClick={() => window.open(project.demo, "_blank")}
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Demo
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>
