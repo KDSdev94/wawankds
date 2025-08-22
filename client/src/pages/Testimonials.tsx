@@ -47,7 +47,7 @@ export default function TestimonialsPage() {
       role: "Client",
       order: "Order DekstopApp - Toko Amartha",
       content:
-        "Super fast work, results are great, revisions are handled quickly and perfectly—absolutely impressive!",
+        "Kok cepet banget, dan hasilnya juga bagus, revisi juga cepet dan semua sesuai dengan yang diinginkan...👌🙏🏻",
       rating: 5,
       avatar: "RMU",
       avatarColor: "bg-blue-500",
@@ -58,7 +58,7 @@ export default function TestimonialsPage() {
       role: "Client",
       order: "Order App - MyLurah",
       content:
-        "Absolutely impressive! The work is great, and the person is kind and friendly—highly recommended!",
+        "Aplikasi yang dibuat cuman dalam waktu 2 minggu sudah jadi, mudah dipahami, desain yang dibuat juga sangat menarik tentunya dan sangat worth it 😍👌🙏🏻",
       rating: 5,
       avatar: "FA",
       avatarColor: "bg-green-500",
@@ -69,7 +69,7 @@ export default function TestimonialsPage() {
       role: "Client",
       order: "Order App - Sampah Tuntas",
       content:
-        "Top-notch service! Always available when needed, fast work, and highly satisfying results.",
+        "Tampilan desainnya sederhana tapi sangat bisa dipahami, dan aplikasi berfungsi dengan baik. Keren, Wan.",
       rating: 5,
       avatar: "AN",
       avatarColor: "bg-orange-500",
@@ -80,32 +80,10 @@ export default function TestimonialsPage() {
       role: "Client",
       order: "Order App - Febri Store",
       content:
-        "Great usability for all users, from administrators to zakat payers.",
+        "Aplikasi yang dibuat cuman dalam waktu 2 minggu sudah jadi, mudah dipahami, desain yang dibuat juga sangat menarik tentunya dan sangat worth it 😍👌🙏🏻",
       rating: 5,
       avatar: "F",
       avatarColor: "bg-purple-500",
-      date: "August 2025",
-    },
-    {
-      name: "Gema Fitri",
-      role: "Client",
-      order: "Order App - Febri Store",
-      content:
-        "Excellent communication throughout the project. The final result exceeded my expectations. Will definitely work together again!",
-      rating: 5,
-      avatar: "AR",
-      avatarColor: "bg-red-500",
-      date: "June 2025",
-    },
-    {
-      name: "Nabila",
-      role: "Client",
-      order: "Order App - Mental Health",
-      content:
-        "Professional, creative, and delivers on time. The new design perfectly captures my brand identity.",
-      rating: 5,
-      avatar: "SA",
-      avatarColor: "bg-pink-500",
       date: "August 2025",
     },
   ];
@@ -138,14 +116,15 @@ export default function TestimonialsPage() {
             {/* Header Section */}
             <div className="mb-12">
               <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-white">
-                Testimonials
+                Testimoni
               </h1>
               <div className="mb-6 h-1 w-16 bg-slate-200 dark:bg-slate-700"></div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-6xl leading-relaxed">
-                In every project, client satisfaction is my top priority. These
-                testimonials reflect my dedication to building high-quality
-                websites that exceed expectations using modern technologies.
+                Dalam setiap proyek, kepuasan klien adalah prioritas utama saya.
+                Testimoni ini mencerminkan dedikasi saya untuk membangun
+                aplikasi yang berfungsi dengan baik dan sesuai dengan yang
+                diinginkan.
               </p>
             </div>
 
@@ -212,8 +191,8 @@ export default function TestimonialsPage() {
             {/* Call to Action */}
             <div className="text-center mt-16">
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Ready to join our satisfied clients? Let's start your project
-                today!
+                Siap untuk bergabung dengan klien yang puas? Ayo mulai proyek
+                Anda dengan saya hari ini!
               </p>
               <Button
                 onClick={() => (window.location.href = "/contact")}

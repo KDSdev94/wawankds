@@ -5,73 +5,68 @@ import { ExternalLink, MapPin } from "lucide-react";
 export default function Experience() {
   const projects = [
     {
-      title: "Proposal Submission System",
+      title: "Sampah Tuntas",
       description:
-        "Proposal submission system for student activities with tracking and approval...",
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
+        "Sebuah aplikasi digital untuk pelaporan adanya sampah di sekitar kita dari laporan warga dengan menggunakan teknologi Expo dan posisi GPS untuk mengetahui lokasi sampah.",
+      image: "/assets/image/sampah_tuntas.jpg",
       tags: [
         {
-          name: "Laravel",
+          name: "React Native",
           color: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300",
         },
         {
-          name: "Bootstrap",
+          name: "Expo",
           color:
             "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
         },
         {
-          name: "MySQL",
+          name: "Firebase",
           color:
             "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
         },
       ],
     },
     {
-      title: "Kebab Atung",
+      title: "Febri Store",
       description:
-        "Created a landing page for a kebab business using SvelteKit, highlighting products...",
-      image:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
+        "Sebuah aplikasi digital untuk menjual produk kebutuhan sehari-hari dengan menggunakan teknologi React Native dan Firebase.",
+      image: "/assets/image/FebriStore.jpg",
       tags: [
         {
-          name: "SvelteKit",
-          color:
-            "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
+          name: "React Native",
+          color: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300",
         },
         {
-          name: "Bootstrap",
+          name: "Expo",
           color:
             "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
         },
         {
-          name: "SCSS",
+          name: "Firebase",
           color:
-            "bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300",
-        },
-        {
-          name: "Prisma",
-          color:
-            "bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300",
+            "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
         },
       ],
     },
     {
-      title: "KISP Application",
+      title: "MyLurah",
       description:
-        "Developed a government website using SvelteKit for the Directorate General of...",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&w=300&h=200&fit=crop",
+        "Sebuah aplikasi digital untuk membantu warga dalam mengakses informasi terkait pemerintahan daerah dengan menggunakan teknologi React Native dan Firebase.",
+      image: "/assets/image/MyLurah.jpg",
       tags: [
         {
-          name: "SvelteKit",
-          color:
-            "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
+          name: "React Native",
+          color: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300",
         },
         {
-          name: "Tailwind",
+          name: "Expo",
           color:
-            "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
+            "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
+        },
+        {
+          name: "Firebase",
+          color:
+            "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
         },
       ],
     },
@@ -81,13 +76,13 @@ export default function Experience() {
     <section id="experience" className="bg-gray-50 dark:bg-gray-900 py-4">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Experience
+          Pengalaman
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-          Every project tells a story, and here's where my professional journey
-          unfolds. From crafting innovative solutions to tackling real-world
-          challenges, these experiences have shaped me into the developer I am
-          today.
+          Setiap proyek memberikan cerita, dan di sini adalah perjalanan saya.
+          Dari menciptakan solusi inovatif hingga menghadapi tantangan nyata,
+          pengalaman-pengalaman ini telah membentuk saya menjadi seorang
+          pengembang yang saya adalah hari ini.
         </p>
 
         <div className="mb-16">
@@ -95,7 +90,7 @@ export default function Experience() {
             <span className="text-gray-400 mr-2">•</span>
             Freelance
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400 ml-4">
-              2022 - now
+              2024 - now
             </span>
           </h3>
 
@@ -107,11 +102,13 @@ export default function Experience() {
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow border dark:border-gray-700"
               >
                 <div className="p-4">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
-                  />
+                  <div className="relative overflow-hidden rounded-lg mb-4 aspect-video">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain sm:object-cover transition-transform duration-300 hover:scale-105 bg-gray-50 dark:bg-gray-700"
+                    />
+                  </div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
                     {project.title}
                   </h4>
@@ -133,34 +130,33 @@ export default function Experience() {
             ))}
           </div>
 
-          {/* Featured project */}
+          {/* Featured project*/}
           <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700">
             <div className="p-6">
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="lg:w-1/2">
-                  <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=500&h=300&fit=crop"
-                    alt="Educational website with colorful design"
-                    className="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-                  />
+                  <div className="relative overflow-hidden rounded-lg aspect-video lg:aspect-[4/3]">
+                    <img
+                      src="/assets/image/e-skuultime.png"
+                      alt="Educational website with colorful design"
+                      className="w-full h-full object-contain sm:object-cover transition-transform duration-300 hover:scale-105 bg-gray-50 dark:bg-gray-700"
+                    />
+                  </div>
                 </div>
                 <div className="lg:w-1/2">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                    Web Developer - Iqralabs
+                    App Development - E-SkuulTime
                   </h4>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    Feb 2023 - May 2024
+                    Januari 2025 - April 2025
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    In this project, I was responsible for developing a 5-page
-                    website based on the design provided by the UI/UX team. My
-                    focus of the project was optimizing the website's
-                    performance, as it included numerous heavy elements such as
-                    images and videos that could impact loading speed. Close
-                    collaboration with the UI/UX team ensured seamless
-                    integration of their designs while maintaining a balance
-                    between aesthetics and functionality to deliver a visually
-                    appealing and high-performing website.
+                    Proyek ini adalah sebuah aplikasi mobile yang dirancang
+                    untuk menyelesaikan studi kasus TA alias Tugas Akhir saya,
+                    aplikasi ini bisa berguna untuk sistem penjadwalan pelajaran
+                    sekolah, petugas bisa mengatur jadwal pelajaran, dan siswa
+                    bisa melihat jadwal pelajaran, termasuk guru bisa melihat
+                    jadwal mengajar mereka.
                   </p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
@@ -169,22 +165,22 @@ export default function Experience() {
                     </span>
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      South Tangerang, Indonesia
+                      Brebes, Indonesia
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge className="bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300 text-xs rounded-full font-medium">
-                      Vue
+                      React Native
                     </Badge>
                     <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 text-xs rounded-full font-medium">
-                      SCSS
+                      Expo
                     </Badge>
                     <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs rounded-full font-medium">
-                      Bootstrap
+                      Firebase
                     </Badge>
                   </div>
                   <Button className="sidebar-dark text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-colors flex items-center gap-2">
-                    Visit Website
+                    VisitGithub
                     <ExternalLink className="w-4 h-4" />
                   </Button>
                 </div>

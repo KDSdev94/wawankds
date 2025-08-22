@@ -17,6 +17,9 @@ import {
 } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { useLocation } from "wouter";
+import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
+import { SiGmail } from "react-icons/si";
 
 interface MobileHeaderProps {
   onNavigate: (section: string) => void;
@@ -52,20 +55,19 @@ export default function MobileHeader({
   );
 
   const navItems = [
-    { id: "introduction", label: "Introduction", icon: Home },
+    { id: "introduction", label: "Home", icon: Home },
     { id: "portfolio", label: "Portfolio", icon: Briefcase },
-    { id: "testimonials", label: "Testimonials", icon: Star },
-    { id: "contact", label: "Contact Me", icon: Mail },
-    { id: "donation", label: "Donation", icon: Heart },
+    { id: "testimonials", label: "Testimoni", icon: Star },
+    { id: "contact", label: "Kontak Saya", icon: Mail },
+    { id: "donation", label: "Donasi", icon: Heart },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Youtube, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Globe, href: "#" },
+    { icon: Github, href: "https://github.com/KDSdev94" },
+    { icon: FaTelegram, href: "https://t.me/kur0409" },
+    { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
+    { icon: FaWhatsapp, href: "https://wa.me/6282134528638" },
+    { icon: SiGmail, href: "mailto:kdsdev94@gmail.com" },
   ];
 
   const handleNavigate = (sectionId: string) => {
@@ -113,7 +115,7 @@ export default function MobileHeader({
                 theme === "dark" ? "text-gray-400" : "text-gray-500"
               }`}
             >
-              Fullstack Developer
+              Freelance App Developer
             </p>
           </div>
         </div>
@@ -220,7 +222,7 @@ export default function MobileHeader({
                 theme === "dark" ? "text-gray-500" : "text-gray-400"
               }`}
             >
-              © 2025 Kurniawan Dwi Saputra
+              © {new Date().getFullYear()} Kurniawan Dwi Saputra
             </p>
           </div>
         </div>

@@ -20,13 +20,12 @@ export default function Introduction() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Introduction
+              Halo, Saya Kurniawan Dwi Saputra
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-              Full Stack Developer from Brebes, Indonesia, with solid experience
-              in responsive systems, e-commerce, and interactive websites.
-              Achieved 98% design accuracy and 99.9% uptime. Committed to
-              innovation and user satisfaction.
+              Saya seorang freelance app developer berasal dari Brebes,
+              Indonesia, dengan pengalaman dalam pengembangan aplikasi mobile.
+              Dengan menggunakan teknologi React Native ataupun Flutter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button

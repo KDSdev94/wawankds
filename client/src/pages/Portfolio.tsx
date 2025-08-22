@@ -72,7 +72,7 @@ export default function PortfolioPage() {
       title: "Sampah Tuntas",
       description:
         "A digital application for managing waste collection and recycling.",
-      image: "/assets/image/sampah_tuntas.png",
+      image: "/assets/image/sampah_tuntas.jpg",
       technologies: ["Expo", "React Native"],
       github: "#",
       demo: "#",
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
       title: "Febri Store",
       description:
         "E-commerce application for selling products and managing store.",
-      image: "/assets/image/febri_store.png",
+      image: "/assets/image/FebriStore.jpg",
       technologies: ["Expo", "React Native"],
       github: "#",
       demo: "#",
@@ -108,11 +108,9 @@ export default function PortfolioPage() {
               <div className="mb-6 h-1 w-16 bg-slate-200 dark:bg-slate-700"></div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-6xl leading-relaxed">
-                As a fullstack web developer, I bring ideas to life by building
-                responsive, visually stunning websites with seamless user
-                experiences. Using the latest frameworks and technologies, I
-                blend creativity with functionality to deliver designs that not
-                only look great but also perform flawlessly.
+                Sebagai seorang pengembang app developer, saya membawa ide-ide
+                saya menjadi kenyataan dengan membangun aplikasi yang menarik
+                dan fungsional berdasarkan kebutuhan client.
               </p>
             </div>
 
@@ -124,11 +122,11 @@ export default function PortfolioPage() {
                   className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border dark:border-gray-700 overflow-hidden group"
                 >
                   {/* Project Image */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-video">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-contain sm:object-cover transition-transform duration-300 group-hover:scale-105 bg-gray-50 dark:bg-gray-700"
                     />
                   </div>
 

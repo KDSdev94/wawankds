@@ -2,18 +2,76 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import { FaWhatsapp, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaTelegram } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
 import { SiGmail, SiYoutube, SiInstagram, SiGooglemaps } from "react-icons/si";
 
 import Sidebar from "@/components/Sidebar";
 import MobileHeader from "@/components/MobileHeader";
-import { useLocation } from "wouter";
 import { useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactPage() {
   const [activeSection, setActiveSection] = useState("contact");
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // Map fields for the EmailJS template
+    const first_name = String(formData.get("first_name") || "").trim();
+    const last_name = String(formData.get("last_name") || "").trim();
+    const from_email = String(formData.get("from_email") || "").trim();
+    const subject = String(formData.get("subject") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const payload = {
+      first_name,
+      last_name,
+      from_email,
+      subject,
+      message,
+      to_email: "kurdwisap04@gmail.com",
+      reply_to: from_email,
+      from_name: `${first_name} ${last_name}`.trim(),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.message || "Failed to send");
+      }
+
+      toast({
+        title: "Message sent",
+        description: "Thank you! I will reply as soon as possible.",
+      });
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      const message = err instanceof Error ? err.message : String(err);
+      toast({
+        title: "Failed to send",
+        description:
+          message || "Please try again later or contact via WhatsApp.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +98,8 @@ export default function ContactPage() {
 
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "contact") {
-      // Already on contact page
       return;
     }
-    // Navigate back to home page
     window.location.href = "/";
   };
 
@@ -62,27 +118,22 @@ export default function ContactPage() {
     },
     {
       icon: SiGooglemaps,
-      title: "Location",
-      value: "Brebes, Central Java, Indonesia",
+      title: "Lokasi",
+      value: "Brebes, Jawa Tengah, Indonesia",
       link: "https://maps.app.goo.gl/p8kCFVPh4dXbhcU68",
     },
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/KDSCorner", label: "GitHub" },
+    { icon: FaGithub, href: "https://github.com/KDSdev94", label: "GitHub" },
     {
-      icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/suryamsj",
+      icon: FaTelegram,
+      href: "https://t.me/kur0409",
       label: "LinkedIn",
     },
     {
-      icon: SiYoutube,
-      href: "https://youtube.com/@suryamsj",
-      label: "YouTube",
-    },
-    {
       icon: SiInstagram,
-      href: "https://instagram.com/suryamsj",
+      href: "https://instagram.com/awan_dwisaputra",
       label: "Instagram",
     },
   ];
@@ -102,14 +153,15 @@ export default function ContactPage() {
             {/* Header Section */}
             <div className="mb-12">
               <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-white">
-                Contact Me
+                Kontak Saya
               </h1>
               <div className="mb-6 h-1 w-16 bg-slate-200 dark:bg-slate-700"></div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-6xl leading-relaxed">
-                Ready to start your next project? Let's discuss how I can help
-                bring your ideas to life. Feel free to reach out through any of
-                the channels below or fill out the contact form.
+                Siap untuk memulai proyek Anda? Ayo diskusikan bagaimana saya
+                dapat membantu mengubah ide Anda menjadi kenyataan. Silakan
+                menghubungi saya melalui saluran berikut atau isi formulir
+                kontak.
               </p>
             </div>
 
@@ -176,7 +228,7 @@ export default function ContactPage() {
                   Send Message
                 </h2>
 
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -187,9 +239,11 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="firstName"
+                        name="first_name"
                         type="text"
                         placeholder="Input your first name here"
                         className="w-full"
+                        required
                       />
                     </div>
                     <div>
@@ -201,6 +255,7 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="lastName"
+                        name="last_name"
                         type="text"
                         placeholder="Input your last name here"
                         className="w-full"
@@ -217,9 +272,11 @@ export default function ContactPage() {
                     </label>
                     <Input
                       id="email"
+                      name="from_email"
                       type="email"
                       placeholder="Input email address"
                       className="w-full"
+                      required
                     />
                   </div>
 
@@ -232,9 +289,11 @@ export default function ContactPage() {
                     </label>
                     <Input
                       id="subject"
+                      name="subject"
                       type="text"
                       placeholder="Project Inquiry"
                       className="w-full"
+                      required
                     />
                   </div>
 
@@ -247,18 +306,21 @@ export default function ContactPage() {
                     </label>
                     <Textarea
                       id="message"
+                      name="message"
                       rows={5}
                       placeholder="Tell me about your minds and needs..."
                       className="w-full"
+                      required
                     />
                   </div>
 
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full sidebar-dark text-white hover:opacity-90 transition-colors"
                   >
                     <FiSend className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </div>
@@ -267,10 +329,10 @@ export default function ContactPage() {
             {/* Additional Info */}
             <div className="mt-16 text-center">
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                I typically respond within 24 hours during business days.
+                Saya biasanya merespon dalam 24 jam selama hari kerja.
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Let's create something amazing together! 🚀
+                Ayo buat sesuatu yang luar biasa bersama! 🚀
               </p>
             </div>
           </div>

@@ -7,24 +7,7 @@ export default function Skills() {
         "bg-yellow-100 text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300",
     },
     {
-      name: "PHP",
-      icon: "🟣",
-      color:
-        "bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-300",
-    },
-    {
-      name: "Typescript",
-      icon: "🔵",
-      color: "bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300",
-    },
-    {
-      name: "Node.js",
-      icon: "🟢",
-      color:
-        "bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-300",
-    },
-    {
-      name: "MySQL",
+      name: "Firebase",
       icon: "🔵",
       color: "bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300",
     },
@@ -34,34 +17,18 @@ export default function Skills() {
       color: "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300",
     },
     {
-      name: "Svelte",
-      icon: "🟠",
-      color:
-        "bg-orange-100 text-orange-600 dark:bg-orange-900 dark:text-orange-300",
-    },
-    {
-      name: "Laravel",
-      icon: "🔴",
-      color: "bg-red-100 text-red-600 dark:bg-red-900 dark:text-red-300",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "🔵",
-      color: "bg-cyan-100 text-cyan-600 dark:bg-cyan-900 dark:text-cyan-300",
-    },
-    {
-      name: "Figma",
+      name: "Flutter",
       icon: "🟣",
       color:
         "bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-300",
     },
     {
-      name: "SASS",
+      name: "React Native",
       icon: "🩷",
       color: "bg-pink-100 text-pink-600 dark:bg-pink-900 dark:text-pink-300",
     },
     {
-      name: "Bootstrap",
+      name: "Next.js",
       icon: "🟣",
       color:
         "bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300",
@@ -72,12 +39,10 @@ export default function Skills() {
     <section id="skills" className="bg-gray-50 dark:bg-gray-900 py-4">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Skills
+          Keterampilan
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-          Great projects are built with great tools. Below is a curated list of
-          the technologies and frameworks I've mastered to deliver high-quality,
-          cutting-edge solutions.
+          Keterampilan berasal dari pengalaman dan pengetahuan yang saya kuasai.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">

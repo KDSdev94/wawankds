@@ -5,12 +5,10 @@ import {
   IoHeartOutline,
   IoMailOutline,
   IoLogoGithub,
-  IoLogoLinkedin,
-  IoLogoYoutube,
   IoLogoInstagram,
-  IoLogoTwitter,
 } from "react-icons/io5";
-import { FaGlobe, FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 import { useTheme } from "./ThemeProvider";
 import { useLocation } from "wouter";
@@ -25,11 +23,11 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   const [, setLocation] = useLocation();
 
   const navItems = [
-    { id: "introduction", label: "Introduction", icon: IoHomeOutline },
+    { id: "introduction", label: "Home", icon: IoHomeOutline },
     { id: "portfolio", label: "Portfolio", icon: IoBriefcaseOutline },
-    { id: "testimonials", label: "Testimonials", icon: IoStarOutline },
-    { id: "contact", label: "Contact Me", icon: IoMailOutline },
-    { id: "donation", label: "Donation", icon: IoHeartOutline },
+    { id: "testimonials", label: "Testimoni", icon: IoStarOutline },
+    { id: "contact", label: "Kontak Saya", icon: IoMailOutline },
+    { id: "donation", label: "Donasi", icon: IoHeartOutline },
   ];
 
   const handleNavigation = (itemId: string) => {
@@ -49,12 +47,11 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   };
 
   const socialLinks = [
-    { icon: IoLogoGithub, href: "#" },
-    { icon: IoLogoLinkedin, href: "#" },
-    { icon: IoLogoYoutube, href: "#" },
-    { icon: IoLogoInstagram, href: "#" },
-    { icon: IoLogoTwitter, href: "#" },
-    { icon: FaGlobe, href: "#" },
+    { icon: IoLogoGithub, href: "https://github.com/KDSdev94" },
+    { icon: FaTelegram, href: "https://t.me/kur0409" },
+    { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
+    { icon: FaWhatsapp, href: "https://wa.me/6285770000000" },
+    { icon: SiGmail, href: "mailto:kdsdev94@gmail.com" },
   ];
 
   return (
@@ -89,7 +86,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Fullstack Developer
+                Freelance App Developer
               </p>
             </div>
           </div>
@@ -169,7 +166,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             theme === "dark" ? "text-gray-500" : "text-gray-400"
           }`}
         >
-          © 2025 Kurniawan Dwi Saputra
+          © {new Date().getFullYear()} Kurniawan Dwi Saputra
         </p>
       </div>
     </div>
