@@ -38,7 +38,7 @@ export default function ContactPage() {
       from_email,
       subject,
       message,
-      to_email: "kurdwisap04@gmail.com",
+      to_email: "kdwisaputra04@gmail.com",
       reply_to: from_email,
       from_name: `${first_name} ${last_name}`.trim(),
     };
@@ -107,8 +107,8 @@ export default function ContactPage() {
     {
       icon: SiGmail,
       title: "Email",
-      value: "kurdwisap04@gmail.com",
-      link: "mailto:kurdwisap04@gmail.com",
+      value: "kdwisaputra04@gmail.com",
+      link: "mailto:kdwisaputra04@gmail.com",
     },
     {
       icon: FaWhatsapp,

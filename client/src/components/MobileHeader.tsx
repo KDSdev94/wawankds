@@ -67,7 +67,7 @@ export default function MobileHeader({
     { icon: FaTelegram, href: "https://t.me/kur0409" },
     { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
     { icon: FaWhatsapp, href: "https://wa.me/6282134528638" },
-    { icon: SiGmail, href: "mailto:kdsdev94@gmail.com" },
+    { icon: SiGmail, href: "mailto:kdwisaputra04@gmail.com" },
   ];
 
   const handleNavigate = (sectionId: string) => {
@@ -115,7 +115,7 @@ export default function MobileHeader({
                 theme === "dark" ? "text-gray-400" : "text-gray-500"
               }`}
             >
-              Freelance Junior App Developer
+              Junior App Developer
             </p>
           </div>
         </div>
