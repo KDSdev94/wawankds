@@ -115,7 +115,7 @@ export default function MobileHeader({
                 theme === "dark" ? "text-gray-400" : "text-gray-500"
               }`}
             >
-              Freelance App Developer
+              Freelance Junior App Developer
             </p>
           </div>
         </div>

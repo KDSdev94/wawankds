@@ -86,7 +86,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Freelance App Developer
+                Junior App Developer
               </p>
             </div>
           </div>

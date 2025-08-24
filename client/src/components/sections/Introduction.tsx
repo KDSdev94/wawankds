@@ -23,7 +23,7 @@ export default function Introduction() {
               Halo, Saya Kurniawan Dwi Saputra
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-              Saya seorang freelance app developer berasal dari Brebes,
+              Saya seorang freelance junior app developer berasal dari Brebes,
               Indonesia, dengan pengalaman dalam pengembangan aplikasi mobile.
               Dengan menggunakan teknologi React Native ataupun Flutter.
             </p>
