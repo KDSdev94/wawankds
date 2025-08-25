@@ -50,7 +50,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
     { icon: IoLogoGithub, href: "https://github.com/KDSdev94" },
     { icon: FaTelegram, href: "https://t.me/kur0409" },
     { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
-    { icon: FaWhatsapp, href: "https://wa.me/6285770000000" },
+    { icon: FaWhatsapp, href: "https://wa.me/6282134528638" },
     { icon: SiGmail, href: "mailto:kdwisaputra04@gmail.com" },
   ];
 
