@@ -56,7 +56,7 @@ export default function PortfolioPage() {
       title: "E-SkuulTime",
       description:
         "Aplikasi ini dirancang untuk memudahkan pengelolaan jadwal, aktivitas akademik, dan komunikasi antara admin, guru, dan siswa.",
-      image: "/assets/image/e-skuultime.png",
+      image: "/assets/image/E-SkuulTime.jpg",
       technologies: ["Expo", "React Native", "Firebase"],
       github: "https://github.com/KDSdev94/E-SkuulTime",
     },
@@ -91,6 +91,15 @@ export default function PortfolioPage() {
       image: "/assets/image/FebriStore.jpg",
       technologies: ["Expo", "React Native", "Firebase"],
       github: "https://github.com/KDSdev94/FebriStore",
+    },
+
+    {
+      title: "Belajar Anak",
+      description:
+        "Aplikasi ini bertujuan untuk membantu anak-anak dalam belajar dengan cara yang menyenangkan dengan sistem interaktif.",
+      image: "/assets/image/belajar-anak.jpeg",
+      technologies: ["Java", "Firebase"],
+      github: "https://github.com/KDSdev94/BelajarAnak",
     },
   ];
 

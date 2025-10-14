@@ -90,7 +90,7 @@ export default function Experience() {
             <span className="text-gray-400 mr-2">•</span>
             Freelance
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400 ml-4">
-              2024 - now
+              2025 - now
             </span>
           </h3>
 
@@ -137,7 +137,7 @@ export default function Experience() {
                 <div className="lg:w-1/2">
                   <div className="relative overflow-hidden rounded-lg aspect-video lg:aspect-[4/3]">
                     <img
-                      src="/assets/image/e-skuultime.png"
+                      src="/assets/image/E-SkuulTime.jpg"
                       alt="Educational website with colorful design"
                       className="w-full h-full object-contain sm:object-cover transition-transform duration-300 hover:scale-105 bg-gray-50 dark:bg-gray-700"
                     />

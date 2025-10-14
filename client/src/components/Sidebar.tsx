@@ -27,7 +27,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
     { id: "portfolio", label: "Portfolio", icon: IoBriefcaseOutline },
     { id: "testimonials", label: "Testimoni", icon: IoStarOutline },
     { id: "contact", label: "Kontak Saya", icon: IoMailOutline },
-    { id: "donation", label: "Donasi", icon: IoHeartOutline },
+    // { id: "donation", label: "Donasi", icon: IoHeartOutline },
   ];
 
   const handleNavigation = (itemId: string) => {
@@ -39,8 +39,8 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
       setLocation("/");
     } else if (itemId === "contact") {
       setLocation("/contact");
-    } else if (itemId === "donation") {
-      setLocation("/donation");
+      // } else if (itemId === "donation") {
+      //   setLocation("/donation");
     } else {
       onNavigate(itemId);
     }
@@ -49,7 +49,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   const socialLinks = [
     { icon: IoLogoGithub, href: "https://github.com/KDSdev94" },
     { icon: FaTelegram, href: "https://t.me/kur0409" },
-    { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
+    { icon: IoLogoInstagram, href: "https://instagram.com/kdsaputra04" },
     { icon: FaWhatsapp, href: "https://wa.me/6282134528638" },
     { icon: SiGmail, href: "mailto:kdwisaputra04@gmail.com" },
   ];

@@ -10,7 +10,6 @@ export default function Introduction() {
   };
 
   const handleResumeDownload = () => {
-    // Implement resume download functionality
     console.log("Download resume");
   };
 

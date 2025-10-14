@@ -133,7 +133,7 @@ export default function ContactPage() {
     },
     {
       icon: SiInstagram,
-      href: "https://instagram.com/awan_dwisaputra",
+      href: "https://instagram.com/kdsaputra04",
       label: "Instagram",
     },
   ];

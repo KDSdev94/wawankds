@@ -9,11 +9,6 @@ import {
   Mail,
   Heart,
   Github,
-  Linkedin,
-  Youtube,
-  Instagram,
-  Twitter,
-  Globe,
 } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { useLocation } from "wouter";
@@ -59,13 +54,13 @@ export default function MobileHeader({
     { id: "portfolio", label: "Portfolio", icon: Briefcase },
     { id: "testimonials", label: "Testimoni", icon: Star },
     { id: "contact", label: "Kontak Saya", icon: Mail },
-    { id: "donation", label: "Donasi", icon: Heart },
+    // { id: "donation", label: "Donasi", icon: Heart },
   ];
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/KDSdev94" },
     { icon: FaTelegram, href: "https://t.me/kur0409" },
-    { icon: IoLogoInstagram, href: "https://instagram.com/awan_dwisaputra" },
+    { icon: IoLogoInstagram, href: "https://instagram.com/kdsaputra04" },
     { icon: FaWhatsapp, href: "https://wa.me/6282134528638" },
     { icon: SiGmail, href: "mailto:kdwisaputra04@gmail.com" },
   ];
@@ -79,8 +74,8 @@ export default function MobileHeader({
       setLocation("/");
     } else if (sectionId === "contact") {
       setLocation("/contact");
-    } else if (sectionId === "donation") {
-      setLocation("/donation");
+      // } else if (sectionId === "donation") {
+      //   setLocation("/donation");
     } else {
       onNavigate(sectionId);
     }
