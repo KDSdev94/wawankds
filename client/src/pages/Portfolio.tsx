@@ -99,7 +99,7 @@ export default function PortfolioPage() {
         "Aplikasi ini bertujuan untuk membantu anak-anak dalam belajar dengan cara yang menyenangkan dengan sistem interaktif.",
       image: "/assets/image/belajar-anak.jpeg",
       technologies: ["Java", "Firebase"],
-      github: "https://github.com/KDSdev94/BelajarAnak",
+      github: "https://github.com/KDSdev94/belajar-anak",
     },
   ];
 
