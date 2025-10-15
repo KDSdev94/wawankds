@@ -10,7 +10,12 @@ export default function Introduction() {
   };
 
   const handleResumeDownload = () => {
-    console.log("Download resume");
+    const link = document.createElement("a");
+    link.href = "/assets/resume.pdf";
+    link.download = "Kurniawan_Dwi_Saputra_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
