@@ -26,6 +26,9 @@ export default function Education() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Sistem Informasi Visual
                 </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  IPK: 3.65
+                </p>
               </div>
             </div>
             <span className="text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-600 px-3 py-1 rounded-full">
@@ -33,6 +36,7 @@ export default function Education() {
             </span>
           </div>
         </div>
+        <div className="mb-6"></div>
         <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-8">
           <div className="flex items-start justify-between mb-6">
             <div className="flex items-start space-x-4">
