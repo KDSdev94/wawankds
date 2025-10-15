@@ -45,7 +45,7 @@ export default function Education() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  SMKA Negeri 2 Brebes
+                  SMA Negeri 2 Brebes
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Ilmu Pengetahuan Sosial
